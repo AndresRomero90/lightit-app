@@ -79,7 +79,11 @@ const DiagnosisPage: React.FC = () => {
             {diagnosis.length > 0 ? (
               <div className='flex flex-col content-start gap-4'>
                 {diagnosis.map((item) => (
-                  <DiagnosisCard name={item.name} accuracy={item.accuracy} />
+                  <DiagnosisCard
+                    name={item.name}
+                    accuracy={item.accuracy}
+                    key={item.id}
+                  />
                 ))}
               </div>
             ) : (
