@@ -4,6 +4,6 @@ export interface Diagnosis {
   issue_id: number;
   case_id: number;
   symptoms: number[];
-  accuracy: number;
+  accuracy: string;
   confirmed: boolean;
 }
