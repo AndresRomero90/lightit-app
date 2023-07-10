@@ -26,6 +26,7 @@ interface Props {
   touched?: boolean | undefined;
   isMulti?: boolean;
   required?: boolean;
+  className?: string;
 }
 
 const Select: React.FC<Props> = ({
@@ -38,6 +39,7 @@ const Select: React.FC<Props> = ({
   required = false,
   isMulti = false,
   onChange,
+  className,
 }) => {
   const selectClasses = clsx(
     'bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white',
@@ -50,7 +52,7 @@ const Select: React.FC<Props> = ({
     "after:content-['*'] after:ml-0.5 after:text-red-500": required,
   });
   return (
-    <div>
+    <div className={className}>
       <label className={labelClasses}>{label}</label>
       <div className='mt-2'>
         <ReactSelect
